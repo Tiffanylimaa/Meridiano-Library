@@ -1,0 +1,36 @@
+# Instruções para agentes
+
+Estas regras valem para todo o repositório.
+
+## Classificação obrigatória
+
+Antes de criar ou mover conteúdo, classifique-o em um destes destinos:
+
+1. Conteúdo reutilizável e seguro para publicação pode entrar no Meridiano Library.
+2. Conteúdo pessoal, acadêmico individual, profissional ou empresarial deve ir para o repositório privado de contexto.
+3. Senhas, tokens, chaves de API e outras credenciais não devem ser armazenados em nenhum repositório.
+
+## Regras de organização
+
+- Trate todo o conteúdo deste repositório como público.
+- Não inclua dados pessoais, confidenciais, internos ou identificáveis.
+- Use `agents/` para papéis persistentes, `prompts/` para tarefas pontuais e `workflows/` para processos com várias etapas.
+- Use `platforms/` apenas quando houver uma diferença funcional real entre Codex, Claude Code e ChatGPT.
+- Evite duplicações entre plataformas: mantenha regras comuns no recurso principal.
+- Use português do Brasil, Markdown e nomes de arquivos em minúsculas com hífens.
+- Mantenha um recurso principal por arquivo.
+- Comece pelo template correspondente em `templates/`.
+- Atualize `CATALOG.md` no mesmo commit ao criar, mover, descontinuar ou arquivar recursos.
+- Use o histórico do Git para versões; não crie arquivos com nomes como `final-v2`.
+- Use caminhos e links relativos e verifique todos os links e exemplos antes de concluir.
+
+## Critérios mínimos
+
+- Agentes: papel, objetivo, limites, processo e formato de saída.
+- Prompts: entradas e formato de saída.
+- Workflows: gatilho, etapas, aprovações humanas e validação.
+- Guias: objetivo, público e pré-requisitos.
+- Exemplos: somente dados fictícios ou anonimizados.
+- Arquivo: motivo da descontinuação e substituto, quando houver.
+
+Em caso de dúvida sobre publicação, não inclua o conteúdo até que ele seja revisado e classificado com segurança.

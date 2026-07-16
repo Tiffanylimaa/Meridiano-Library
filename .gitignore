@@ -1,0 +1,44 @@
+# Variáveis de ambiente (permite exemplo sem valores reais)
+.env
+.env.*
+!.env.example
+
+# Chaves e certificados
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# IDE e sistema operacional
+.idea/
+.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# Dependências
+node_modules/
+vendor/
+.venv/
+venv/
+
+# Build, cobertura e cache
+dist/
+build/
+out/
+coverage/
+.cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# Logs e temporários
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.swp
+*.bak
