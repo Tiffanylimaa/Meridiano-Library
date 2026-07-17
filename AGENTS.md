@@ -10,6 +10,15 @@ Antes de criar ou mover conteúdo, classifique-o em um destes destinos:
 2. Conteúdo pessoal, acadêmico individual, profissional ou empresarial deve ir para o repositório privado de contexto.
 3. Senhas, tokens, chaves de API e outras credenciais não devem ser armazenados em nenhum repositório.
 
+## Divisão de responsabilidades entre Library e Context
+
+- Use este repositório como fonte pública de skills, agentes, prompts, workflows, templates e guias reutilizáveis.
+- Use repositórios privados de contexto, quando autorizados e disponíveis, como fontes de fatos, histórico, preferências, decisões e estado atual.
+- No ecossistema pessoal de Tiffany, `Tiffanylimaa/Meridiano-context` cumpre a função de contexto privado.
+- Um recurso do Library pode declarar quais entradas de contexto necessita, mas não deve copiar, publicar ou persistir os dados privados recebidos.
+- Ao combinar os repositórios, carregue somente o contexto necessário e mantenha a saída pública genérica, minimizada e anonimizada.
+- Não duplique no Library fatos pessoais ou históricos; não duplique no Context skills ou mecanismos genéricos.
+
 ## Regras de organização
 
 - Trate todo o conteúdo deste repositório como público.

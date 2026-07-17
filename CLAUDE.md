@@ -10,4 +10,6 @@ Antes de trabalhar, consulte nesta ordem:
 
 Quando a tarefa pedir agentes, prompts, workflows, skills ou outros recursos da biblioteca, leia também [`ai-resources.json`](ai-resources.json) e [`.agents/skills/use-meridiano-library/SKILL.md`](.agents/skills/use-meridiano-library/SKILL.md). Aplique a política de confiança antes de buscar ou executar conteúdo externo.
 
+O Library fornece mecanismos reutilizáveis; um repositório privado de contexto fornece o conhecimento necessário para personalizá-los. Quando houver autorização e acesso ao `Tiffanylimaa/Meridiano-context`, carregue somente os módulos relevantes e use este Library para selecionar a skill, o agente, o prompt, o workflow ou o template adequado. Não copie, publique nem persista conteúdo privado neste repositório. Um recurso público pode especificar entradas esperadas, mas deve continuar genérico e reutilizável.
+
 Não duplique recursos. Mantenha instruções comuns no arquivo principal e registre em `platforms/` somente diferenças necessárias e específicas do Claude Code, Codex ou ChatGPT. Trate todo conteúdo como público e atualize o catálogo no mesmo commit.

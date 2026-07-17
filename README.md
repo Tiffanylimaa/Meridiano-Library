@@ -6,6 +6,12 @@ Os recursos serão adicionados gradualmente. Consulte o [catálogo central](CATA
 
 Agentes de IA podem começar pelo manifesto [`ai-resources.json`](ai-resources.json) e pela skill portátil [`use-meridiano-library`](.agents/skills/use-meridiano-library/SKILL.md). Consulte o [guia de uso por agentes](guides/uso-por-agentes-de-ia.md) para Codex, Claude Code, ChatGPT e clientes genéricos.
 
+## Relação operacional com repositórios de contexto
+
+O Meridiano Library fornece mecanismos reutilizáveis; repositórios privados de contexto fornecem o conhecimento pessoal, histórico, acadêmico ou estratégico usado para personalizar esses mecanismos. No caso de Tiffany, essa função pertence ao repositório privado `Tiffanylimaa/Meridiano-context`.
+
+Quando um contexto privado estiver autorizado e disponível, um agente pode carregar somente os módulos necessários e aplicar uma skill, agente, prompt, workflow ou template deste Library. O recurso público pode definir quais entradas de contexto espera, mas não deve incorporar, reproduzir ou persistir os dados privados recebidos. Contexto pessoal não pertence ao Library, e mecanismos genéricos não devem ser duplicados no repositório de contexto.
+
 ## O que pertence à biblioteca
 
 - recursos genéricos, reutilizáveis e seguros para publicação;
