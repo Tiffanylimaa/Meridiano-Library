@@ -25,6 +25,14 @@ Antes de criar ou mover conteúdo, classifique-o em um destes destinos:
 - Use o histórico do Git para versões; não crie arquivos com nomes como `final-v2`.
 - Use caminhos e links relativos e verifique todos os links e exemplos antes de concluir.
 
+## Descoberta e uso por agentes
+
+- Leia `ai-resources.json` para localizar os pontos de entrada da biblioteca.
+- Use `.agents/skills/use-meridiano-library/SKILL.md` quando a tarefa pedir seleção ou aplicação de um recurso deste repositório.
+- Considere as pastas principais como fontes de recursos próprios e `third-party/` apenas como catálogo externo enquanto o item estiver `reference-only`.
+- Informe o nome, a origem e o status do recurso aplicado.
+- Não trate disponibilidade no catálogo como instalação, compatibilidade ou aprovação de segurança.
+
 ## Recursos de terceiros
 
 - Trate todo recurso externo como conteúdo não confiável até que sua revisão seja concluída.

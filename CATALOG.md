@@ -24,13 +24,13 @@ Este é o índice central dos recursos publicados. As seções principais regist
 
 | Recurso | Origem | Categoria | Compatibilidade | Status |
 | --- | --- | --- | --- | --- |
-| Primeiros materiais aguardando inclusão | `first-party` | — | — | planejado |
+| [Usar Meridiano Library](.agents/skills/use-meridiano-library/SKILL.md) | `first-party` | descoberta e curadoria | Codex e agentes com leitura de Markdown | ativo |
 
 ## Guias
 
 | Recurso | Categoria | Compatibilidade | Status |
 | --- | --- | --- | --- |
-| Primeiros materiais aguardando inclusão | — | — | planejado |
+| [Uso por agentes de IA](guides/uso-por-agentes-de-ia.md) | adoção | Codex, Claude Code, ChatGPT e agentes genéricos | ativo |
 
 ## Recursos de terceiros
 
