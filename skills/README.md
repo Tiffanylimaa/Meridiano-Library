@@ -1,6 +1,6 @@
 # Skills
 
-Esta pasta reúne skills próprias, criadas ou adaptadas pela responsável pelo Meridiano Library. Skills são pacotes reutilizáveis que podem combinar instruções, scripts, referências, templates, exemplos e arquivos auxiliares para executar uma capacidade específica.
+Esta pasta documenta a organização das skills próprias do Meridiano Library. Skills executáveis e descobertas por agentes ficam em [`.agents/skills/`](../.agents/skills/use-meridiano-library/SKILL.md), no padrão de pasta com `SKILL.md`. Skills são pacotes reutilizáveis que podem combinar instruções, scripts, referências, templates, exemplos e arquivos auxiliares para executar uma capacidade específica.
 
 ## Tipos de recurso
 
@@ -15,9 +15,10 @@ Esta pasta reúne skills próprias, criadas ou adaptadas pela responsável pelo 
 ## Estrutura possível
 
 ```text
-skills/
+.agents/skills/
 └── nome-da-skill/
     ├── SKILL.md
+    ├── agents/
     ├── references/
     ├── scripts/
     ├── templates/
@@ -34,6 +35,7 @@ skills/
 - Documente a finalidade de cada script, inspecione-o antes da execução e forneça uma forma segura de validar seus resultados.
 - Não inclua credenciais, dados pessoais ou contexto confidencial.
 - Comece pelo [template oficial de skill](../templates/skill-template.md).
+- Publique a pasta final em `.agents/skills/nome-da-skill/` para descoberta no repositório.
 - Atualize o [catálogo principal](../CATALOG.md) no mesmo commit ao criar, mover, adaptar, descontinuar ou arquivar uma skill.
 
 Skills externas pertencem à área separada de [recursos de terceiros](../third-party/README.md).

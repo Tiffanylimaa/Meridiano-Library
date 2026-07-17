@@ -4,6 +4,8 @@ Biblioteca pública e reutilizável de agentes de IA, prompts, workflows, skills
 
 Os recursos serão adicionados gradualmente. Consulte o [catálogo central](CATALOG.md) para acompanhar o conteúdo disponível e seu status.
 
+Agentes de IA podem começar pelo manifesto [`ai-resources.json`](ai-resources.json) e pela skill portátil [`use-meridiano-library`](.agents/skills/use-meridiano-library/SKILL.md). Consulte o [guia de uso por agentes](guides/uso-por-agentes-de-ia.md) para Codex, Claude Code, ChatGPT e clientes genéricos.
+
 ## O que pertence à biblioteca
 
 - recursos genéricos, reutilizáveis e seguros para publicação;
@@ -20,6 +22,7 @@ Não publique dados pessoais, contexto acadêmico individual, processos profissi
 
 | Caminho | Finalidade |
 | --- | --- |
+| [`.agents/skills/`](.agents/skills/use-meridiano-library/SKILL.md) | Skills no padrão aberto, descobertas automaticamente pelo Codex e carregáveis por outros agentes. |
 | [`agents/`](agents/README.md) | Papéis persistentes de agentes, com objetivos, limites e processos. |
 | [`prompts/`](prompts/README.md) | Instruções para tarefas pontuais com entradas e saídas definidas. |
 | [`workflows/`](workflows/README.md) | Processos de várias etapas, incluindo aprovações e validação. |
@@ -45,6 +48,8 @@ Antes de usar um recurso externo, confira autoria, fonte, licença, tipo de regi
 4. Copie o recurso para seu contexto ou adapte-o sem inserir informações privadas neste repositório.
 5. Ao contribuir, comece pelo modelo adequado em [`templates/`](templates/README.md).
 6. Valide links e exemplos e atualize o catálogo no mesmo commit.
+
+Para uso por uma IA, forneça acesso ao repositório e peça que leia `AGENTS.md`, `ai-resources.json` e a skill `use-meridiano-library`. Referências `third-party` continuam indisponíveis para execução até revisão e aprovação.
 
 ## Convenções
 

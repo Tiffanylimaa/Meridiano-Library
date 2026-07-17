@@ -1,0 +1,4 @@
+interface:
+  display_name: "Usar Meridiano Library"
+  short_description: "Descobre e usa recursos aprovados da biblioteca com segurança"
+  default_prompt: "Use $use-meridiano-library para localizar um recurso adequado, verificar sua confiança e aplicá-lo com segurança."
