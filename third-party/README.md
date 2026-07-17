@@ -1,8 +1,8 @@
 # Recursos de terceiros
 
-Esta pasta é a área de curadoria de agentes, prompts, skills, workflows e plugins externos. Ela deve permanecer claramente separada dos recursos próprios do Meridiano Library.
+Esta pasta é a área de curadoria de agentes, prompts, skills, workflows, plugins e recursos gerais externos. Ela deve permanecer claramente separada dos recursos próprios do Meridiano Library.
 
-Quando existirem recursos reais e aprovados, a estrutura poderá incluir:
+Conforme as categorias catalogadas, a estrutura pode incluir:
 
 ```text
 third-party/
@@ -10,10 +10,13 @@ third-party/
 ├── prompts/
 ├── skills/
 ├── workflows/
-└── plugins/
+├── plugins/
+└── resources/
 ```
 
-Essas subpastas só devem ser criadas com a inclusão do primeiro recurso correspondente. Consulte o [catálogo de terceiros](CATALOG.md) e use o [template de registro](resource-record-template.md).
+Essas subpastas só devem ser criadas com a inclusão do primeiro recurso correspondente. Bibliotecas, frameworks, ferramentas e projetos que não se encaixem nas demais categorias ficam em `resources/`. Consulte o [catálogo de terceiros](CATALOG.md) e use o [template de registro](resource-record-template.md).
+
+O inventário atual registra todos os repositórios marcados com estrela como `reference-only`. Uma estrela representa interesse para curadoria, não aprovação de segurança, compatibilidade, licença ou redistribuição.
 
 ## Referência externa
 

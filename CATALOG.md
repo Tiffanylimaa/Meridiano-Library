@@ -1,6 +1,6 @@
 # Catálogo do Meridiano Library
 
-Este é o índice central dos recursos publicados. As seções principais registram recursos próprios; materiais externos aparecem separadamente, com origem explícita, e mantêm seus dados completos no [catálogo de terceiros](third-party/CATALOG.md). Os primeiros materiais estão aguardando inclusão.
+Este é o índice central dos recursos publicados. As seções principais registram recursos próprios; materiais externos aparecem separadamente, com origem explícita, e mantêm seus dados completos no [catálogo de terceiros](third-party/CATALOG.md).
 
 ## Agentes
 
@@ -36,7 +36,30 @@ Este é o índice central dos recursos publicados. As seções principais regist
 
 | Recurso | Tipo | Origem | Compatibilidade | Revisão | Status |
 | --- | --- | --- | --- | --- | --- |
-| Primeiros materiais aguardam avaliação | — | `third-party` | — | `unreviewed` | avaliando |
+| [Git Sweep](third-party/resources/arc90-git-sweep.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Flag Icons](third-party/resources/lipis-flag-icons.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Colors](third-party/resources/mrmrs-colors.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Animate.css](third-party/resources/animate-css.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Bootstrap](third-party/resources/twbs-bootstrap.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [GPT Researcher](third-party/agents/assafelovic-gpt-researcher.md) | agente | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Claude HUD](third-party/plugins/jarrodwatts-claude-hud.md) | plugin | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Worktree Manager Skill](third-party/skills/wirasm-worktree-manager-skill.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [PRPs Agentic Engineering](third-party/workflows/wirasm-prps-agentic-eng.md) | workflow | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Social Media Skills](third-party/skills/charlie947-social-media-skills.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Marketing Skills](third-party/skills/coreyhaines31-marketingskills.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [transitions.dev](third-party/skills/jakubantalik-transitions-dev.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [claude-mem](third-party/plugins/thedotmack-claude-mem.md) | plugin | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Context7](third-party/plugins/upstash-context7.md) | plugin | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Anthropic Skills](third-party/skills/anthropics-skills.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Superpowers](third-party/skills/obra-superpowers.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Agent Skills](third-party/skills/vercel-labs-agent-skills.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Taste Skill](third-party/skills/leonxlnx-taste-skill.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [UI Skills](third-party/skills/ibelick-ui-skills.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Astryx](third-party/resources/facebook-astryx.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [UI/UX Pro Max Skill](third-party/skills/nextlevelbuilder-ui-ux-pro-max-skill.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Impeccable](third-party/skills/pbakaus-impeccable.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Streamlit](third-party/resources/streamlit-streamlit.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [O Meridiano](third-party/resources/tiffanylimaa-omeridiano.md) | recurso geral | `third-party` | não avaliada | `rejected` | fora do escopo |
 
 Consulte o [catálogo de terceiros](third-party/CATALOG.md) para autoria, fonte, licença, versão ou commit, tipo de registro e revisão detalhada. Não misture recursos próprios e externos sem identificar claramente a origem.
 
