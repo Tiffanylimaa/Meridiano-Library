@@ -64,9 +64,9 @@ Este catálogo registra a procedência, a licença e o estado de revisão de rec
 
 | Recurso | Tipo de registro | Autor | Fonte | Licença | Compatibilidade | Revisão | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| [Pacote com 136 skills de instrução](installed-skills/README.md) | `vendored-instruction-only` | múltiplos | [Manifesto](installed-skills/SOURCES.json) | MIT, Apache-2.0 e licenças por skill | carregamento sob demanda | `review-on-first-use` | instalado |
+| [Pacote com 137 skills revisadas](installed-skills/README.md) | `vendored-reviewed` | múltiplos | [Manifesto](installed-skills/SOURCES.json) | MIT, Apache-2.0 e licenças por skill | carregamento sob demanda | `review-on-first-use` | instalado |
 
-Os pacotes não contêm scripts ou executáveis. Cada skill deve ser lida antes do primeiro uso, e permissões externas continuam sujeitas a aprovação.
+O pacote não executa scripts automaticamente. A única exceção com scripts armazenados é `superpowers/subagent-driven-development`, cujos três scripts Bash foram revisados e continuam sujeitos a autorização antes de qualquer execução. Cada skill deve ser lida antes do primeiro uso, e permissões externas continuam sujeitas a aprovação.
 
 ## Legenda
 
@@ -75,6 +75,7 @@ Os pacotes não contêm scripts ou executáveis. Cada skill deve ser lida antes 
 - `reference-only`: apenas referência e link para a fonte original;
 - `vendored`: cópia preservada no repositório, com redistribuição permitida;
 - `vendored-instruction-only`: cópia limitada a instruções e arquivos auxiliares sem scripts executáveis;
+- `vendored-reviewed`: cópia revisada que pode conter scripts explicitamente inventariados, sem autorização de execução automática;
 - `adapted`: versão modificada, com alterações e licença documentadas.
 
 ### Revisão

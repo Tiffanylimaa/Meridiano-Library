@@ -4,11 +4,11 @@ Esta lista registra o que permaneceu fora da importação automática e por quê
 
 ## Skills com código executável
 
-Foram bloqueadas 32 skills que contêm scripts, executáveis, manifestos de dependência ou instaladores remotos de alto risco: 20 de `openai/skills`, 4 de `obra/superpowers`, 5 de `nextlevelbuilder/ui-ux-pro-max-skill`, 1 de `pbakaus/impeccable` e 2 de `Wirasm/PRPs-agentic-eng`.
+Foram bloqueadas 31 skills que contêm scripts, executáveis, manifestos de dependência ou instaladores remotos de alto risco: 20 de `openai/skills`, 3 de `obra/superpowers`, 5 de `nextlevelbuilder/ui-ux-pro-max-skill`, 1 de `pbakaus/impeccable` e 2 de `Wirasm/PRPs-agentic-eng`.
 
 As skills `sentry` e `render-deploy` foram removidas do conjunto inicialmente filtrado porque instruíam o uso de `curl | bash`.
 
-A skill `subagent-driven-development` foi removida porque continha scripts Bash sem extensão dentro da pasta `scripts/`.
+A skill `subagent-driven-development` foi incluída separadamente após a leitura integral e a revisão estática dos seus três scripts Bash. Eles permanecem sem execução automática e exigem autorização do usuário para serem executados.
 
 Elas exigem leitura integral dos scripts, revisão de dependências, efeitos, rede e permissões antes de uma importação separada.
 

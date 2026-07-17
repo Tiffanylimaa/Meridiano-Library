@@ -24,10 +24,11 @@
       "discover": true,
       "use_when_approved": true
     },
-    "third_party_installed_instruction_only": {
+    "third_party_installed_reviewed": {
       "discover": true,
       "read_after_skill_review": true,
       "execute_scripts": false,
+      "reviewed_scripts_may_be_stored": true,
       "grant_external_permissions": false
     },
     "third_party_reference_only": {
