@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "name": "Meridiano Library",
+  "language": "pt-BR",
+  "instructions": "AGENTS.md",
+  "catalog": "CATALOG.md",
+  "usage_guide": "guides/uso-por-agentes-de-ia.md",
+  "skill_roots": [
+    ".agents/skills"
+  ],
+  "installed_skill_roots": [
+    "third-party/installed-skills"
+  ],
+  "resource_roots": {
+    "agents": "agents",
+    "prompts": "prompts",
+    "workflows": "workflows",
+    "skills": ".agents/skills",
+    "guides": "guides",
+    "third_party": "third-party"
+  },
+  "trust_policy": {
+    "first_party": {
+      "discover": true,
+      "use_when_approved": true
+    },
+    "third_party_installed_reviewed": {
+      "discover": true,
+      "read_after_skill_review": true,
+      "execute_scripts": false,
+      "reviewed_scripts_may_be_stored": true,
+      "grant_external_permissions": false
+    },
+    "third_party_reference_only": {
+      "discover": true,
+      "installed": false,
+      "execute": false,
+      "requires_license_review": true,
+      "requires_security_review": true,
+      "requires_user_authorization_to_fetch": true
+    }
+  },
+  "entrypoints": {
+    "codex": "platforms/codex.md",
+    "claude_code": "platforms/claude-code.md",
+    "chatgpt": "platforms/chatgpt.md",
+    "generic": "platforms/agente-generico.md"
+  }
+}
