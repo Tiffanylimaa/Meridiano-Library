@@ -45,12 +45,15 @@ Este é o índice central dos recursos publicados. As seções principais regist
 | [Claude HUD](third-party/plugins/jarrodwatts-claude-hud.md) | plugin | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Worktree Manager Skill](third-party/skills/wirasm-worktree-manager-skill.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [PRPs Agentic Engineering](third-party/workflows/wirasm-prps-agentic-eng.md) | workflow | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [OpenAI Codex Action](third-party/workflows/openai-codex-action.md) | workflow | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Social Media Skills](third-party/skills/charlie947-social-media-skills.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Marketing Skills](third-party/skills/coreyhaines31-marketingskills.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [transitions.dev](third-party/skills/jakubantalik-transitions-dev.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [claude-mem](third-party/plugins/thedotmack-claude-mem.md) | plugin | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Context7](third-party/plugins/upstash-context7.md) | plugin | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Anthropic Skills](third-party/skills/anthropics-skills.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [Defending Code Reference Harness](third-party/skills/anthropics-defending-code-reference-harness.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
+| [OpenAI Skills](third-party/skills/openai-skills.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Superpowers](third-party/skills/obra-superpowers.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Agent Skills](third-party/skills/vercel-labs-agent-skills.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Taste Skill](third-party/skills/leonxlnx-taste-skill.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |

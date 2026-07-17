@@ -1,6 +1,6 @@
 # Catálogo de recursos de terceiros
 
-Este catálogo registra a procedência, a licença e o estado de revisão de recursos externos. Os 24 repositórios marcados com estrela na conta responsável foram inventariados em 17 de julho de 2026 como referências; nenhum conteúdo externo foi copiado ou executado.
+Este catálogo registra a procedência, a licença e o estado de revisão de recursos externos. Os 24 repositórios marcados com estrela na conta responsável e 3 indicações adicionais foram inventariados em 17 de julho de 2026 como referências; nenhum conteúdo externo foi copiado ou executado.
 
 ## Agentes
 
@@ -23,6 +23,8 @@ Este catálogo registra a procedência, a licença e o estado de revisão de rec
 | [Marketing Skills](skills/coreyhaines31-marketingskills.md) | `reference-only` | coreyhaines31 | [GitHub](https://github.com/coreyhaines31/marketingskills) | MIT | não avaliada | `unreviewed` | avaliando |
 | [transitions.dev](skills/jakubantalik-transitions-dev.md) | `reference-only` | Jakubantalik | [GitHub](https://github.com/Jakubantalik/transitions.dev) | desconhecida | não avaliada | `unreviewed` | avaliando |
 | [Anthropic Skills](skills/anthropics-skills.md) | `reference-only` | anthropics | [GitHub](https://github.com/anthropics/skills) | desconhecida | não avaliada | `unreviewed` | avaliando |
+| [Defending Code Reference Harness](skills/anthropics-defending-code-reference-harness.md) | `reference-only` | anthropics | [GitHub](https://github.com/anthropics/defending-code-reference-harness) | desconhecida | não avaliada | `unreviewed` | avaliando |
+| [OpenAI Skills](skills/openai-skills.md) | `reference-only` | openai | [GitHub](https://github.com/openai/skills) | desconhecida | não avaliada | `unreviewed` | avaliando |
 | [Superpowers](skills/obra-superpowers.md) | `reference-only` | obra | [GitHub](https://github.com/obra/superpowers) | MIT | não avaliada | `unreviewed` | avaliando |
 | [Vercel Agent Skills](skills/vercel-labs-agent-skills.md) | `reference-only` | vercel-labs | [GitHub](https://github.com/vercel-labs/agent-skills) | desconhecida | não avaliada | `unreviewed` | avaliando |
 | [Taste Skill](skills/leonxlnx-taste-skill.md) | `reference-only` | Leonxlnx | [GitHub](https://github.com/Leonxlnx/taste-skill) | MIT | não avaliada | `unreviewed` | avaliando |
@@ -35,6 +37,7 @@ Este catálogo registra a procedência, a licença e o estado de revisão de rec
 | Recurso | Tipo de registro | Autor | Fonte | Licença | Compatibilidade | Revisão | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | [PRPs Agentic Engineering](workflows/wirasm-prps-agentic-eng.md) | `reference-only` | Wirasm | [GitHub](https://github.com/Wirasm/PRPs-agentic-eng) | MIT | não avaliada | `unreviewed` | avaliando |
+| [OpenAI Codex Action](workflows/openai-codex-action.md) | `reference-only` | openai | [GitHub](https://github.com/openai/codex-action) | Apache-2.0 | não avaliada | `unreviewed` | avaliando |
 
 ## Plugins
 
