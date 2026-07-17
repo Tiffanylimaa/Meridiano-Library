@@ -18,9 +18,12 @@ Consulte o adaptador da plataforma: [Codex](../platforms/codex.md), [Claude Code
 - Outros agentes podem carregar a mesma skill explicitamente por caminho.
 - Qualquer agente pode analisar `ai-resources.json` para encontrar catálogos, pastas e política de confiança.
 - Agentes, prompts, workflows, skills próprias e guias aprovados podem ser aplicados conforme seu status.
+- As 136 skills em `third-party/installed-skills/` podem ser carregadas sob demanda após leitura integral do `SKILL.md` selecionado.
 
 ## Limite das referências externas
 
 Os arquivos em `third-party/` são fichas de procedência, não cópias instaladas. Itens `reference-only` podem ser encontrados e recomendados, mas não devem ser executados. Para torná-los utilizáveis, revise licença e segurança, fixe a versão de origem e publique uma adaptação aprovada ou um procedimento de instalação separado.
+
+A exceção é `third-party/installed-skills/`, que contém apenas pacotes de instrução importados segundo a política descrita em seu README. Essa disponibilidade não concede permissões para ferramentas, rede, credenciais ou ações externas.
 
 Nenhum arquivo consegue obrigar toda IA existente a carregar o repositório automaticamente. O cliente precisa ter acesso aos arquivos e capacidade para seguir Markdown ou o manifesto JSON.

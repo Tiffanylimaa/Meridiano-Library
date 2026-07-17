@@ -8,6 +8,9 @@
   "skill_roots": [
     ".agents/skills"
   ],
+  "installed_skill_roots": [
+    "third-party/installed-skills"
+  ],
   "resource_roots": {
     "agents": "agents",
     "prompts": "prompts",
@@ -20,6 +23,12 @@
     "first_party": {
       "discover": true,
       "use_when_approved": true
+    },
+    "third_party_installed_instruction_only": {
+      "discover": true,
+      "read_after_skill_review": true,
+      "execute_scripts": false,
+      "grant_external_permissions": false
     },
     "third_party_reference_only": {
       "discover": true,

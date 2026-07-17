@@ -60,12 +60,21 @@ Este catálogo registra a procedência, a licença e o estado de revisão de rec
 | [Streamlit](resources/streamlit-streamlit.md) | `reference-only` | streamlit | [GitHub](https://github.com/streamlit/streamlit) | Apache-2.0 | não avaliada | `unreviewed` | avaliando |
 | [O Meridiano](resources/tiffanylimaa-omeridiano.md) | `reference-only` | Tiffanylimaa | [GitHub](https://github.com/Tiffanylimaa/omeridiano) | desconhecida | não avaliada | `rejected` | fora do escopo |
 
+## Skills instaladas sob demanda
+
+| Recurso | Tipo de registro | Autor | Fonte | Licença | Compatibilidade | Revisão | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| [Pacote com 136 skills de instrução](installed-skills/README.md) | `vendored-instruction-only` | múltiplos | [Manifesto](installed-skills/SOURCES.json) | MIT, Apache-2.0 e licenças por skill | carregamento sob demanda | `review-on-first-use` | instalado |
+
+Os pacotes não contêm scripts ou executáveis. Cada skill deve ser lida antes do primeiro uso, e permissões externas continuam sujeitas a aprovação.
+
 ## Legenda
 
 ### Tipo de registro
 
 - `reference-only`: apenas referência e link para a fonte original;
 - `vendored`: cópia preservada no repositório, com redistribuição permitida;
+- `vendored-instruction-only`: cópia limitada a instruções e arquivos auxiliares sem scripts executáveis;
 - `adapted`: versão modificada, com alterações e licença documentadas.
 
 ### Revisão
@@ -73,6 +82,7 @@ Este catálogo registra a procedência, a licença e o estado de revisão de rec
 - `unreviewed`: ainda não revisado;
 - `reviewing`: revisão em andamento;
 - `reviewed`: conteúdo inspecionado;
+- `review-on-first-use`: estrutura validada, com leitura integral obrigatória antes do primeiro uso;
 - `rejected`: não recomendado, inseguro ou fora do escopo;
 - `needs-update`: a origem possui mudanças ainda não avaliadas.
 

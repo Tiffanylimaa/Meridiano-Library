@@ -36,6 +36,7 @@ Este é o índice central dos recursos publicados. As seções principais regist
 
 | Recurso | Tipo | Origem | Compatibilidade | Revisão | Status |
 | --- | --- | --- | --- | --- | --- |
+| [Pacote com 136 skills externas](third-party/installed-skills/README.md) | skill bundle | `third-party` | carregamento sob demanda | `review-on-first-use` | instalado |
 | [Git Sweep](third-party/resources/arc90-git-sweep.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Flag Icons](third-party/resources/lipis-flag-icons.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Colors](third-party/resources/mrmrs-colors.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
