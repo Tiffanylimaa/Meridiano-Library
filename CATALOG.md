@@ -6,7 +6,8 @@ Este é o índice central dos recursos publicados. As seções principais regist
 
 | Recurso | Categoria | Compatibilidade | Status |
 | --- | --- | --- | --- |
-| Primeiros materiais aguardando inclusão | — | — | planejado |
+| [Copiloto de ecossistema de produto](agents/copiloto-de-ecossistema-de-produto.md) | operations | Codex, Claude Code, ChatGPT | ativo |
+| [Agente revisor de consistência](agents/agente-revisor-de-consistencia.md) | review | Codex, Claude Code, ChatGPT | ativo |
 
 ## Prompts
 
