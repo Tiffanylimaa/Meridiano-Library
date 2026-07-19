@@ -29,7 +29,6 @@ Este catálogo registra a procedência, a licença e o estado de revisão de rec
 | [Vercel Agent Skills](skills/vercel-labs-agent-skills.md) | `reference-only` | vercel-labs | [GitHub](https://github.com/vercel-labs/agent-skills) | desconhecida | não avaliada | `unreviewed` | avaliando |
 | [Taste Skill](skills/leonxlnx-taste-skill.md) | `reference-only` | Leonxlnx | [GitHub](https://github.com/Leonxlnx/taste-skill) | MIT | não avaliada | `unreviewed` | avaliando |
 | [UI Skills](skills/ibelick-ui-skills.md) | `reference-only` | ibelick | [GitHub](https://github.com/ibelick/ui-skills) | MIT | não avaliada | `unreviewed` | avaliando |
-| [UI UX Pro Max Skill](skills/nextlevelbuilder-ui-ux-pro-max-skill.md) | `reference-only` | nextlevelbuilder | [GitHub](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | MIT | não avaliada | `unreviewed` | avaliando |
 | [Impeccable](skills/pbakaus-impeccable.md) | `reference-only` | pbakaus | [GitHub](https://github.com/pbakaus/impeccable) | Apache-2.0 | não avaliada | `unreviewed` | avaliando |
 
 ## Workflows
@@ -64,9 +63,9 @@ Este catálogo registra a procedência, a licença e o estado de revisão de rec
 
 | Recurso | Tipo de registro | Autor | Fonte | Licença | Compatibilidade | Revisão | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| [Pacote com 137 skills revisadas](installed-skills/README.md) | `vendored-reviewed` | múltiplos | [Manifesto](installed-skills/SOURCES.json) | MIT, Apache-2.0 e licenças por skill | carregamento sob demanda | `review-on-first-use` | instalado |
+| [Pacote com 138 skills revisadas](installed-skills/README.md) | `vendored-reviewed` | múltiplos | [Manifesto](installed-skills/SOURCES.json) | MIT, Apache-2.0 e licenças por skill | carregamento sob demanda | `review-on-first-use` | instalado |
 
-O pacote não executa scripts automaticamente. A única exceção com scripts armazenados é `superpowers/subagent-driven-development`, cujos três scripts Bash foram revisados e continuam sujeitos a autorização antes de qualquer execução. Cada skill deve ser lida antes do primeiro uso, e permissões externas continuam sujeitas a aprovação.
+O pacote não executa scripts automaticamente. Duas exceções têm scripts armazenados e revisados, sujeitos a autorização antes de qualquer execução: `superpowers/subagent-driven-development` (três scripts Bash) e `ui-ux-pro-max-skill/ui-ux-pro-max` (busca local em Python — `search.py`/`core.py`/`design_system.py`, lidos na íntegra em 19/07/2026, stdlib apenas, sem rede/subprocess/credenciais, testado com execução de fumaça). Cada skill deve ser lida antes do primeiro uso, e permissões externas continuam sujeitas a aprovação.
 
 ## Legenda
 

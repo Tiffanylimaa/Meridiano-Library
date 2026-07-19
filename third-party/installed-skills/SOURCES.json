@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "installed_on": "2026-07-17",
-  "skill_count": 137,
+  "skill_count": 138,
   "import_policy": "instruction-only-by-default-reviewed-scripts-by-exception",
   "script_execution_policy": "stored-not-auto-executed-requires-user-authorization",
   "usage_status": "available-after-per-skill-review",
@@ -14,7 +14,7 @@
     {"name": "superpowers", "repository": "obra/superpowers", "commit": "d884ae04edebef577e82ff7c4e143debd0bbec99", "license": "MIT", "license_file": "superpowers/UPSTREAM-LICENSE.txt", "skill_count": 11},
     {"name": "taste-skill", "repository": "Leonxlnx/taste-skill", "commit": "7c397f22d3af6f2b3f1925eb147d8e8801086151", "license": "MIT", "license_file": "taste-skill/UPSTREAM-LICENSE.txt", "skill_count": 13},
     {"name": "ui-skills", "repository": "ibelick/ui-skills", "commit": "5dfc4a783f6f0338d5086b693bf9edfdf4367310", "license": "MIT", "license_file": "ui-skills/UPSTREAM-LICENSE.txt", "skill_count": 6},
-    {"name": "ui-ux-pro-max-skill", "repository": "nextlevelbuilder/ui-ux-pro-max-skill", "commit": "f8ac5e1266dba8354ea96e19994d9f4345e7ec31", "license": "MIT", "license_file": "ui-ux-pro-max-skill/UPSTREAM-LICENSE.txt", "skill_count": 2},
+    {"name": "ui-ux-pro-max-skill", "repository": "nextlevelbuilder/ui-ux-pro-max-skill", "commit": "f8ac5e1266dba8354ea96e19994d9f4345e7ec31", "license": "MIT", "license_file": "ui-ux-pro-max-skill/UPSTREAM-LICENSE.txt", "skill_count": 3},
     {"name": "defending-code-reference-harness", "repository": "anthropics/defending-code-reference-harness", "commit": "6de8141b971d917a461bce4193c8b535a6b6cfc1", "license": "Apache-2.0", "license_file": "defending-code-reference-harness/UPSTREAM-LICENSE.txt", "skill_count": 9},
     {"name": "context7", "repository": "upstash/context7", "commit": "23843e9ce62908896cf2dcd32cc5c03c05047416", "license": "MIT", "license_file": "context7/UPSTREAM-LICENSE.txt", "skill_count": 3},
     {"name": "prps-agentic-eng", "repository": "Wirasm/PRPs-agentic-eng", "commit": "a643e84600c4f740e9d5a52051f6783ee9852567", "license": "MIT", "license_file": "prps-agentic-eng/UPSTREAM-LICENSE.txt", "skill_count": 9},
@@ -27,6 +27,15 @@
       "scripts": ["scripts/review-package", "scripts/sdd-workspace", "scripts/task-brief"],
       "review": "read-in-full-and-static-scope-review",
       "effects": "reads a local plan and Git history; writes only to an explicit output path or .superpowers/sdd inside the current repository"
+    },
+    {
+      "bundle": "ui-ux-pro-max-skill",
+      "skill": "ui-ux-pro-max",
+      "scripts": ["scripts/search.py", "scripts/core.py", "scripts/design_system.py"],
+      "review": "read-in-full-and-executed-smoke-test",
+      "reviewed_on": "2026-07-19",
+      "effects": "stdlib-only Python (csv, re, pathlib, math, collections, json, os); no subprocess/eval/exec, no network calls, no credential or env-var access; reads CSV data files under its own data/ directory; with --persist writes only under an explicitly-passed --output-dir, skipping an existing MASTER.md unless --force is given. Smoke-tested with `python3 search.py \"SaaS landing page hero dark modern\" --design-system` (no --persist) — ran clean, no errors, no writes outside stdout.",
+      "note": "Only the react/nextjs/vue/svelte/astro/swiftui/react-native/flutter/nuxtjs/nuxt-ui/html-tailwind/shadcn/jetpack-compose/threejs/angular/laravel/javafx/wpf/winui/avalonia/uno/uwp stack CSVs plus the 12 core domain CSVs and ui-reasoning.csv were vendored (all files referenced by core.py's CSV_CONFIG/STACK_CONFIG and design_system.py's REASONING_FILE). Repo tree was not exhaustively enumerated (GitHub API/codeload blocked for non-scoped repos in this session); paths were confirmed individually via raw.githubusercontent.com against the 3 skills already known from plugin.json + prior bundle import (banner-design, slides, ui-ux-pro-max)."
     }
   ],
   "adaptations": [

@@ -36,7 +36,7 @@ Este é o índice central dos recursos publicados. As seções principais regist
 
 | Recurso | Tipo | Origem | Compatibilidade | Revisão | Status |
 | --- | --- | --- | --- | --- | --- |
-| [Pacote com 137 skills externas](third-party/installed-skills/README.md) | skill bundle | `third-party` | carregamento sob demanda | `review-on-first-use` | instalado |
+| [Pacote com 138 skills externas](third-party/installed-skills/README.md) | skill bundle | `third-party` | carregamento sob demanda | `review-on-first-use` | instalado |
 | [Git Sweep](third-party/resources/arc90-git-sweep.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Flag Icons](third-party/resources/lipis-flag-icons.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Colors](third-party/resources/mrmrs-colors.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
@@ -60,7 +60,6 @@ Este é o índice central dos recursos publicados. As seções principais regist
 | [Taste Skill](third-party/skills/leonxlnx-taste-skill.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [UI Skills](third-party/skills/ibelick-ui-skills.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Astryx](third-party/resources/facebook-astryx.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
-| [UI/UX Pro Max Skill](third-party/skills/nextlevelbuilder-ui-ux-pro-max-skill.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Impeccable](third-party/skills/pbakaus-impeccable.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Streamlit](third-party/resources/streamlit-streamlit.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [O Meridiano](third-party/resources/tiffanylimaa-omeridiano.md) | recurso geral | `third-party` | não avaliada | `rejected` | fora do escopo |

@@ -1,6 +1,6 @@
 # Skills externas instaladas
 
-Esta área contém 137 skills importadas de 11 repositórios e carregáveis sob demanda pela skill [`use-meridiano-library`](../../.agents/skills/use-meridiano-library/SKILL.md). Consulte [`SOURCES.json`](SOURCES.json) para procedência, commit, licença, quantidade, revisões de scripts e adaptações.
+Esta área contém 138 skills importadas de 11 repositórios e carregáveis sob demanda pela skill [`use-meridiano-library`](../../.agents/skills/use-meridiano-library/SKILL.md). Consulte [`SOURCES.json`](SOURCES.json) para procedência, commit, licença, quantidade, revisões de scripts e adaptações.
 
 ## Critério da importação
 
@@ -12,7 +12,7 @@ Esta área contém 137 skills importadas de 11 repositórios e carregáveis sob 
 
 ## Estado de confiança
 
-As skills estão instaladas para leitura, mas continuam sendo conteúdo externo. Antes de aplicar uma skill, o agente deve ler seu `SKILL.md`, conferir as ferramentas e ações solicitadas e respeitar `AGENTS.md`. Instalação não autoriza rede, credenciais, publicação, exclusão, execução de comandos ou outras mudanças externas. A skill `superpowers/subagent-driven-development` contém três scripts Bash revisados e armazenados, mas nenhum deles pode ser executado automaticamente.
+As skills estão instaladas para leitura, mas continuam sendo conteúdo externo. Antes de aplicar uma skill, o agente deve ler seu `SKILL.md`, conferir as ferramentas e ações solicitadas e respeitar `AGENTS.md`. Instalação não autoriza rede, credenciais, publicação, exclusão, execução de comandos ou outras mudanças externas. Duas skills contêm scripts revisados e armazenados, mas nenhum deles pode ser executado automaticamente: `superpowers/subagent-driven-development` (três scripts Bash) e `ui-ux-pro-max-skill/ui-ux-pro-max` (`scripts/search.py`, `scripts/core.py`, `scripts/design_system.py` — lidos na íntegra, stdlib Python apenas, sem rede/subprocess/credenciais; ver `SOURCES.json`).
 
 ## Itens não importados
 
