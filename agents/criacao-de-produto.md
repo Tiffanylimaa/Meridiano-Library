@@ -42,7 +42,8 @@ Reduzir o risco de produzir um produto que ninguém quer, num formato que não c
 ### Obrigatórias
 
 - `item_do_roteiro`: nome, linha, etapa da jornada (descobrir/aprender/aplicar/dominar/transformar/continuar) e preço-alvo do Notion "Produção de Conteúdo".
-- `contexto_de_marca`: identidade visual **editorial** (nova direção, jul/2026 — substitui o neo-brutalist anterior; código ainda não migrado), `ConversionPageTemplate` como padrão de página de produto (via skill `o-meridiano-context` / repo `omeridiano`).
+- `contexto_de_marca`: identidade visual **editorial** (confirmada em produção em jul/2026 — substitui o neo-brutalist anterior), `ConversionPageTemplate` como padrão de página de produto (via skill `o-meridiano-context` / repo `omeridiano`).
+- **Atenção com produtos da linha Tech & IA**: essa linha (`slug: tech-ia`) é diferente do hub "Prompts com IA" (`/prompts`). Um produto do roteiro na linha Tech & IA (ex.: "Mini Mapa das AIs", "Curso Detalhado de Uso de AI") não é necessariamente um pack de prompts — não assumir formato de pack de prompts só porque a linha é sobre IA.
 
 ### Opcionais
 
