@@ -6,7 +6,10 @@ Este é o índice central dos recursos publicados. As seções principais regist
 
 | Recurso | Categoria | Compatibilidade | Status |
 | --- | --- | --- | --- |
-| Primeiros materiais aguardando inclusão | — | — | planejado |
+| [Agente de Validação de Demanda](agents/validacao-de-demanda.md) | pesquisa | Codex, Claude Code, ChatGPT | rascunho |
+| [Agente de Conteúdo Orgânico](agents/conteudo-organico.md) | conteúdo | Codex, Claude Code, ChatGPT | rascunho |
+| [Agente de Tráfego Pago](agents/trafego-pago.md) | marketing | Codex, Claude Code, ChatGPT | rascunho |
+| [Agente de Criação de Produto](agents/criacao-de-produto.md) | produto | Codex, Claude Code, ChatGPT | rascunho |
 
 ## Prompts
 
