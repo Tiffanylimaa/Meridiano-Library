@@ -42,7 +42,7 @@ Reduzir o risco de produzir um produto que ninguém quer, num formato que não c
 ### Obrigatórias
 
 - `item_do_roteiro`: nome, linha, etapa da jornada (descobrir/aprender/aplicar/dominar/transformar/continuar) e preço-alvo do Notion "Produção de Conteúdo".
-- `contexto_de_marca`: identidade visual neo-brutalist + amarelo primário, `ConversionPageTemplate` como padrão de página de produto (via skill `o-meridiano-context` / repo `omeridiano`).
+- `contexto_de_marca`: identidade visual **editorial** (nova direção, jul/2026 — substitui o neo-brutalist anterior; código ainda não migrado), `ConversionPageTemplate` como padrão de página de produto (via skill `o-meridiano-context` / repo `omeridiano`).
 
 ### Opcionais
 
@@ -65,7 +65,7 @@ Reduzir o risco de produzir um produto que ninguém quer, num formato que não c
 2. **Checar validação de demanda.** Se ausente, parar aqui e recomendar rodar o Agente de Validação de Demanda (ou usar sinal do Agente de Conteúdo Orgânico como proxy, com confiança reduzida).
 3. **Pesquisar mercado e voz do cliente** para a dor específica — inspirado nas skills `customer-research` e `product-marketing` da Library: linguagem real do público, concorrência direta/indireta, o que já existe no mercado para essa dor.
 4. **Desenhar a oferta**: estrutura de conteúdo (o que precisa estar dentro), entregáveis, formato, tamanho recomendado, elementos recomendados — inspirado nas skills `offers`, `pricing` e `lead-magnets` (bônus, garantia, naming, estrutura de valor, quando aplicável ao ticket do produto).
-5. **Checar alinhamento estético e funcional com a marca**: identidade neo-brutalist + amarelo (referência: skills `brutalist-skill` e `taste-skill` da Library, mais `web-design-guidelines`), e se o formato cabe em produto avulso hoje sem área de membros.
+5. **Checar alinhamento estético e funcional com a marca**: identidade editorial (referência: categoria "Editorial Grid / Magazine" em `ui-ux-pro-max-skill`, mais `web-design-guidelines`), e se o formato cabe em produto avulso hoje sem área de membros. Não usar `brutalist-skill` como referência — a marca deixou de ser neo-brutalist.
 6. **Produzir a especificação final**, com veredito de prontidão para produção e lista de dependências/bloqueios identificados.
 
 ## Formato de saída
@@ -101,7 +101,7 @@ Ficha de produto, pronta para colar de volta na database Notion:
 ## Related skills (Meridiano-Library)
 
 `customer-research`, `product-marketing`, `offers`, `pricing`, `lead-magnets`, `marketing-psychology` — pesquisa e design de oferta.
-`taste-skill/brutalist-skill`, `ui-ux-pro-max-skill`, `web-design-guidelines` — alinhamento estético e funcional.
+`ui-ux-pro-max-skill` (categoria "Editorial Grid / Magazine"), `web-design-guidelines` — alinhamento estético e funcional com a nova direção editorial.
 `marketing-council` — para decisões de maior porte (ex.: repensar uma linha inteira do roteiro), quando o caso justificar múltiplas perspectivas antes de decidir.
 
 ## Agentes relacionados (Meridiano-Library/agents)
