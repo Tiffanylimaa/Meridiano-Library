@@ -35,12 +35,14 @@ Este é o índice central dos recursos publicados. As seções principais regist
 | --- | --- | --- | --- |
 | [Uso por agentes de IA](guides/uso-por-agentes-de-ia.md) | adoção | Codex, Claude Code, ChatGPT e agentes genéricos | ativo |
 | [Scroll stack de cards em loop](guides/scroll-stack-cards-loop.md) | boas práticas / UI | HTML/CSS/JS puro, portável para React | ativo |
+| [Scroll expand hero](guides/scroll-expand-hero.md) | boas práticas / UI | HTML/CSS/JS puro, portável para React | ativo |
 
 ## Exemplos
 
 | Recurso | Guia relacionado | Compatibilidade | Status |
 | --- | --- | --- | --- |
 | [Scroll stack de cards em loop](examples/ui-patterns/scroll-stack-cards-loop.html) | [Scroll stack de cards em loop](guides/scroll-stack-cards-loop.md) | HTML/CSS/JS puro, sem dependências | ativo |
+| [Scroll expand hero](examples/ui-patterns/scroll-expand-hero.html) | [Scroll expand hero](guides/scroll-expand-hero.md) | HTML/CSS/JS puro, sem dependências | ativo |
 
 ## Recursos de terceiros
 
@@ -73,6 +75,7 @@ Este é o índice central dos recursos publicados. As seções principais regist
 | [Impeccable](third-party/skills/pbakaus-impeccable.md) | skill | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [Streamlit](third-party/resources/streamlit-streamlit.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando |
 | [O Meridiano](third-party/resources/tiffanylimaa-omeridiano.md) | recurso geral | `third-party` | não avaliada | `rejected` | fora do escopo |
+| [React Bits — ScrollExpand](third-party/resources/react-bits-scrollexpand.md) | recurso geral | `third-party` | não avaliada | `unreviewed` | avaliando (sem acesso à fonte) |
 
 Consulte o [catálogo de terceiros](third-party/CATALOG.md) para autoria, fonte, licença, versão ou commit, tipo de registro e revisão detalhada. Não misture recursos próprios e externos sem identificar claramente a origem.
 

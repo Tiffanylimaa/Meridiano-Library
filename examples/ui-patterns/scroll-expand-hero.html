@@ -1,0 +1,99 @@
+<title>Scroll expand hero</title>
+<style>
+:root{
+  --background:#FBFAF8; --foreground:#1D1D1A; --surface:#FFFFFF;
+  --muted-foreground:#696862; --border:#E9E6DF;
+  --c1:#DFD34D; --c2:#E7A4C4; --c3:#C4A7E7;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --background:#17151B; --surface:#1E1B23; --foreground:#F2F0EC; --muted-foreground:#A6A2AC; --border:#332F3A; }
+}
+:root[data-theme="dark"]{ --background:#17151B; --surface:#1E1B23; --foreground:#F2F0EC; --muted-foreground:#A6A2AC; --border:#332F3A; }
+
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--background);color:var(--foreground);}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;overflow-x:hidden;}
+
+.hero{position:relative;height:220vh;}
+.hero-sticky{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;}
+
+.hero-text{position:relative;z-index:2;text-align:center;max-width:640px;padding:0 24px;}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-foreground);font-weight:600;margin:0 0 12px;}
+h1{font-size:clamp(28px,5vw,48px);line-height:1.12;margin:0;font-weight:600;text-wrap:balance;}
+
+.media{
+  position:relative;margin-top:28px;border-radius:28px;overflow:hidden;
+  background:linear-gradient(135deg,var(--c1),var(--c2) 55%,var(--c3));
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.35);
+  will-change:transform,border-radius;
+}
+.media-label{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:14px;font-weight:600;letter-spacing:.04em;text-shadow:0 1px 6px rgba(0,0,0,.35);
+  opacity:0;transition:opacity .3s;
+}
+
+.note{max-width:640px;margin:0 auto;padding:48px 24px 100px;font-size:13px;color:var(--muted-foreground);line-height:1.7;}
+.note b{color:var(--foreground);}
+.spacer{height:20vh;}
+</style>
+
+<div class="hero">
+  <div class="hero-sticky">
+    <div class="hero-text">
+      <p class="eyebrow">Exemplo — scroll expand hero</p>
+      <h1>A mídia cresce conforme você rola a página</h1>
+    </div>
+    <div class="media" id="media">
+      <div class="media-label" id="mediaLabel">substitua por uma imagem/vídeo real</div>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  <b>Como funciona:</b> a caixa de mídia começa pequena e centralizada; conforme a seção rola dentro do espaço reservado (aqui, 220vh de altura pra 100vh de scroll útil), ela cresce em largura, altura e preenche o cantos (raio de borda encolhendo até 0), até ocupar a tela inteira. O texto acima permanece fixo e some de leve com a rolagem. É a mesma família de técnica do <a href="../../guides/scroll-stack-cards-loop.md">scroll stack de cards em loop</a>: um wrapper alto cria distância de scroll, um filho <code>position:sticky</code> prende a cena na tela, e o progresso vira interpolação de estilo via JS.
+</div>
+
+<script>
+const wrap = document.querySelector('.hero');
+const media = document.getElementById('media');
+const label = document.getElementById('mediaLabel');
+const text = document.querySelector('.hero-text');
+
+// Tamanho inicial e final da mídia, em fração da viewport.
+const START_W = 0.42, START_H = 0.34;
+const END_W = 1, END_H = 0.72;
+const START_RADIUS = 28, END_RADIUS = 0;
+
+function render() {
+  const rect = wrap.getBoundingClientRect();
+  const vh = window.innerHeight;
+  const total = rect.height - vh;
+  const scrolled = Math.min(Math.max(-rect.top, 0), total);
+  const p = total > 0 ? scrolled / total : 0; // 0 -> 1
+
+  const w = (START_W + (END_W - START_W) * p) * vh * (window.innerWidth / vh);
+  const wPx = (START_W + (END_W - START_W) * p) * window.innerWidth;
+  const hPx = (START_H + (END_H - START_H) * p) * vh;
+  const radius = START_RADIUS + (END_RADIUS - START_RADIUS) * p;
+
+  media.style.width = `${wPx}px`;
+  media.style.height = `${hPx}px`;
+  media.style.borderRadius = `${radius}px`;
+  text.style.opacity = String(Math.max(0, 1 - p * 1.6));
+  text.style.transform = `translateY(${-p * 24}px)`;
+  label.style.opacity = p > 0.55 ? '1' : '0';
+}
+
+let ticking = false;
+function onScroll() {
+  if (!ticking) {
+    requestAnimationFrame(() => { render(); ticking = false; });
+    ticking = true;
+  }
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', onScroll);
+render();
+</script>
+<div class="spacer"></div>

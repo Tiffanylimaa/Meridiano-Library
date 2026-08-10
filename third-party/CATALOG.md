@@ -58,6 +58,7 @@ Este catálogo registra a procedência, a licença e o estado de revisão de rec
 | [Astryx](resources/facebook-astryx.md) | `reference-only` | facebook | [GitHub](https://github.com/facebook/astryx) | MIT | não avaliada | `unreviewed` | avaliando |
 | [Streamlit](resources/streamlit-streamlit.md) | `reference-only` | streamlit | [GitHub](https://github.com/streamlit/streamlit) | Apache-2.0 | não avaliada | `unreviewed` | avaliando |
 | [O Meridiano](resources/tiffanylimaa-omeridiano.md) | `reference-only` | Tiffanylimaa | [GitHub](https://github.com/Tiffanylimaa/omeridiano) | desconhecida | não avaliada | `rejected` | fora do escopo |
+| [React Bits — ScrollExpand](resources/react-bits-scrollexpand.md) | `reference-only` | desconhecido | [reactbits.dev](https://reactbits.dev) | desconhecida | não avaliada | `unreviewed` | avaliando (fonte não acessada) |
 
 ## Skills instaladas sob demanda
 
