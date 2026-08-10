@@ -21,7 +21,9 @@ tags: ["design", "ui", "scroll", "react"]
 
 ## Descrição
 
-Componente citado pelo nome `@react-bits/ScrollExpand-JS-CSS` (instalável, segundo o pedido original, via `npx shadcn@latest add`). Pelo nome e pela convenção de outros componentes de scroll do React Bits, é um padrão de mídia (imagem/vídeo) que começa pequena e expande conforme a página rola, geralmente até preencher a largura da viewport.
+Componente citado pelo nome `@react-bits/ScrollExpand-JS-CSS` (instalável, segundo o pedido original, via `npx shadcn@latest add`). É um padrão de mídia (imagem/vídeo) que começa pequena e expande conforme a página (ou um container interno) rola. A API de props foi parcialmente confirmada pelo usuário, que colou dois trechos reais de código usando o componente — ver "Fonte original" e "Limitações".
+
+Props confirmadas por esses exemplos de uso (não pelo código-fonte): `src`, `alt`, `title`, `scrollHint`, `useWindowScroll`, `mediaZoom`, `startWidth`, `startHeight`, `startRadius`, `endRadius`, `scrollDistance`, `holdDistance`, `smoothing`, `overlayScrim`, `enabled`, `children`.
 
 ## Motivo da inclusão
 
@@ -31,7 +33,8 @@ Solicitado como referência para uso no Projeto Meridiano. Catalogado aqui como 
 
 - URL: `https://reactbits.dev` (domínio do projeto React Bits; a página exata do componente não foi confirmada)
 - Registro do componente: `@react-bits/ScrollExpand-JS-CSS`
-- Data de acesso: **não foi possível acessar** — ver Limitações.
+- Data de acesso: **não foi possível acessar** o site/registry — ver Limitações.
+- Em 2026-08-10, o usuário colou dois trechos de código JSX usando o componente real (fora deste ambiente), o que confirma a API pública de props sem revelar a implementação, autoria ou licença.
 
 ## Autoria
 
@@ -72,7 +75,7 @@ Nenhum script foi executado. A tentativa de instalação via `npx shadcn@latest 
 
 ## Limitações
 
-Este registro é excepcionalmente limitado: não há confirmação de autoria, licença, versão, comportamento real ou conteúdo do componente. Tudo que existe aqui é o nome do pacote e uma inferência de comportamento a partir da convenção de nomes do React Bits ("ScrollExpand" = mídia que expande no scroll). Trate como não verificado até que alguém com acesso de rede a `reactbits.dev`/`ui.shadcn.com` confirme fonte, licença e código.
+Ainda não há confirmação de autoria, licença, versão, código-fonte ou comportamento visual exato (easing, timing) do componente. O que existe além do nome do pacote é a API pública de props, confirmada por dois trechos de uso reais colados pelo usuário — suficiente pra recriar o comportamento de forma compatível, insuficiente pra qualquer alegação de fidelidade ao componente original ou pra saber se a redistribuição seria permitida. Trate como não verificado até que alguém com acesso de rede a `reactbits.dev`/`ui.shadcn.com` confirme fonte, licença e código-fonte real.
 
 ## Instruções de instalação ou uso
 
@@ -82,10 +85,11 @@ Não instale. Consulte `https://reactbits.dev` diretamente (fora deste ambiente)
 
 - **Decisão:** avaliando.
 - **Justificativa:** Solicitado para uso, mas o ambiente de execução não teve acesso de rede para verificar fonte, licença ou conteúdo.
-- **Próxima ação:** revisão manual com acesso de rede real antes de copiar, adaptar ou instalar. Uma recriação própria e independente do padrão geral ("mídia que expande no scroll") foi publicada separadamente em [`examples/ui-patterns/scroll-expand-hero.html`](../../examples/ui-patterns/scroll-expand-hero.html) e [`guides/scroll-expand-hero.md`](../../guides/scroll-expand-hero.md) — é código original, não uma cópia ou adaptação deste componente.
+- **Próxima ação:** revisão manual com acesso de rede real antes de copiar, adaptar ou instalar o componente de verdade. Uma recriação própria, compatível com a API de props confirmada mas não uma cópia do código-fonte, foi publicada em [`examples/ui-patterns/ScrollExpand.jsx`](../../examples/ui-patterns/ScrollExpand.jsx) (React), [`examples/ui-patterns/scroll-expand-hero.html`](../../examples/ui-patterns/scroll-expand-hero.html) (vanilla) e [`guides/scroll-expand-hero.md`](../../guides/scroll-expand-hero.md).
 
 ## Histórico de atualização
 
 | Data | Versão ou commit | Alteração | Revisão |
 | --- | --- | --- | --- |
 | 2026-08-04 | — | Registro inicial; acesso à fonte bloqueado neste ambiente | `unreviewed` |
+| 2026-08-10 | — | Usuário colou 2 exemplos reais de uso (props); API pública documentada, código-fonte/licença seguem não verificados | `unreviewed` |

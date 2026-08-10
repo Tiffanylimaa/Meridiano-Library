@@ -43,6 +43,7 @@ Este é o índice central dos recursos publicados. As seções principais regist
 | --- | --- | --- | --- |
 | [Scroll stack de cards em loop](examples/ui-patterns/scroll-stack-cards-loop.html) | [Scroll stack de cards em loop](guides/scroll-stack-cards-loop.md) | HTML/CSS/JS puro, sem dependências | ativo |
 | [Scroll expand hero](examples/ui-patterns/scroll-expand-hero.html) | [Scroll expand hero](guides/scroll-expand-hero.md) | HTML/CSS/JS puro, sem dependências | ativo |
+| [ScrollExpand (componente React)](examples/ui-patterns/ScrollExpand.jsx) | [Scroll expand hero](guides/scroll-expand-hero.md) | React, sem dependências além de `react` | ativo |
 
 ## Recursos de terceiros
 
