@@ -1,0 +1,193 @@
+<title>Scroll stack em loop</title>
+<style>
+:root{
+  --background:#FBFAF8; --foreground:#1D1D1A; --surface:#FFFFFF; --surface-subtle:#F5F3EE;
+  --muted-foreground:#696862; --border:#E9E6DF;
+  --c1:#DFD34D; --c2:#E7A4C4; --c3:#E7639B; --c4:#C4A7E7; --c5:#8A6BB8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --background:#17151B; --surface:#1E1B23; --surface-subtle:#231F29; --foreground:#F2F0EC; --muted-foreground:#A6A2AC; --border:#332F3A; }
+}
+:root[data-theme="dark"]{ --background:#17151B; --surface:#1E1B23; --surface-subtle:#231F29; --foreground:#F2F0EC; --muted-foreground:#A6A2AC; --border:#332F3A; }
+
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--background);color:var(--foreground);}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;overflow-x:hidden;}
+
+.intro{max-width:640px;margin:0 auto;padding:56px 24px 28px;}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-foreground);font-weight:600;margin:0 0 10px;}
+h1{font-size:30px;line-height:1.18;margin:0 0 12px;font-weight:600;text-wrap:balance;
+  background-image:linear-gradient(100deg,var(--c1),var(--c4) 55%,var(--c2));
+  background-clip:text;-webkit-background-clip:text;color:transparent;display:inline-block;}
+.sub{font-size:15px;color:var(--muted-foreground);line-height:1.65;margin:0 0 8px;}
+.sub b{color:var(--foreground);}
+.progress-row{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted-foreground);font-variant-numeric:tabular-nums;border-top:1px solid var(--border);margin-top:20px;padding-top:16px;}
+.progress-row b{color:var(--foreground);}
+.dots{display:flex;gap:6px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--border);transition:background .3s;}
+.dot.active{background:#B23E72;}
+
+.stage-wrap{position:relative;}
+.sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.deck{position:relative;width:min(680px,88vw);height:min(72vh,560px);}
+.card{
+  position:absolute;inset:0;border-radius:22px;overflow:hidden;isolation:isolate;
+  box-shadow:0 1px 0 rgba(23,20,25,.14),0 30px 60px -30px rgba(23,20,25,.45);
+  will-change:transform,opacity;
+}
+.card-fx{position:absolute;inset:0;overflow:hidden;}
+.mq-quilt{position:absolute;inset:-18%;animation:mqWaveDrift 41.6s ease-in-out infinite;}
+@keyframes mqWaveDrift{0%{transform:translate(0,0) scale(1.08)}50%{transform:translate(-4%,3%) scale(1.16)}100%{transform:translate(0,0) scale(1.08)}}
+@media (prefers-reduced-motion:reduce){.mq-quilt{animation:none}}
+.card-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,21,38,.97) 0%,rgba(26,21,38,.93) 30%,rgba(26,21,38,.74) 55%,rgba(26,21,38,.28) 78%,rgba(26,21,38,0) 96%);}
+.card-body{position:absolute;left:0;right:0;bottom:0;padding:36px 40px;}
+.card-index{font-family:ui-monospace,'SF Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin:0 0 12px;text-shadow:0 1px 6px rgba(0,0,0,.5);}
+.card-title{font-size:clamp(26px,4vw,38px);font-weight:600;margin:0 0 10px;color:#FBFAF8;text-wrap:balance;}
+.card-desc{font-size:14.5px;line-height:1.55;color:rgba(251,250,248,.82);max-width:46ch;margin:0;}
+
+.note{max-width:640px;margin:32px auto 0;padding:0 24px 80px;font-size:13px;color:var(--muted-foreground);line-height:1.7;}
+.note b{color:var(--foreground);}
+.spacer{height:14vh;}
+</style>
+
+<div class="intro">
+  <p class="eyebrow">Exemplo — scroll stack em loop</p>
+  <h1>Pilha de cards no scroll, em arco</h1>
+  <p class="sub">Cada seção vira um card que sobe e cobre quase inteiro o anterior — uma fatia de cada card empilhado atrás continua visível, curvando levemente pro lado conforme afunda (não reto pra cima), como um baralho fanado. Role a página pra sentir.</p>
+  <div class="progress-row">
+    <b id="progressLabel">Categoria — 1/5</b>
+    <div class="dots" id="dots"></div>
+  </div>
+</div>
+
+<div class="stage-wrap" id="stageWrap">
+  <div class="sticky">
+    <div class="deck" id="deck"></div>
+  </div>
+</div>
+
+<div class="note">
+  <b>Alternativas prontas, se preferir não manter este código:</b> o <b>Aceternity UI</b> (ui.aceternity.com) tem componentes React em Framer Motion chamados "Card Stack" e "Sticky Scroll Reveal", código aberto (MIT). Pra inspiração visual sem código, o <b>Codrops</b> (tympanus.net/codrops) tem tutoriais de scroll com cards empilhados, e buscar "stacking cards scroll" no <b>CodePen</b> mostra várias variações de timing.
+</div>
+
+<script>
+// Ciclo de cor compartilhado: cada card usa uma janela de 4 cores de um
+// ciclo de 5, deslocada uma posição da vizinha -- cards adjacentes acabam
+// compartilhando tons, lendo como um espectro contínuo em vez de paletas
+// isoladas. Troque CYCLE pelas cores da sua marca (mínimo 3, o ideal é 5+
+// pra criar variação real entre os cards).
+const CYCLE = ['#DFD34D', '#E7A4C4', '#E7639B', '#C4A7E7', '#8A6BB8'];
+const cycleWindow = (pos) => [0, 1, 2, 3].map((o) => CYCLE[(pos + o) % CYCLE.length]);
+
+// Conteúdo fictício -- substitua por suas próprias seções/categorias.
+const CARDS = [
+  { cat:'PESQUISA', title:'Descoberta e Pesquisa', desc:'Entender o problema antes de desenhar qualquer solução.', accent:'#E7A4C4', wave: cycleWindow(0) },
+  { cat:'DESIGN', title:'Design de Interface', desc:'Traduzir a pesquisa em fluxos e telas concretas.', accent:'#C4A7E7', wave: cycleWindow(1) },
+  { cat:'PROTÓTIPO', title:'Prototipagem', desc:'Testar a interação antes de qualquer linha de código final.', accent:'#DFD34D', wave: cycleWindow(2) },
+  { cat:'ENGENHARIA', title:'Implementação', desc:'Construir com qualidade o que foi validado nas etapas anteriores.', accent:'#E7A4C4', wave: cycleWindow(3) },
+  { cat:'ITERAÇÃO', title:'Medir e Iterar', desc:'Acompanhar o resultado real e ajustar com base em dados.', accent:'#8A6BB8', wave: cycleWindow(4) },
+];
+
+const deck = document.getElementById('deck');
+const stageWrap = document.getElementById('stageWrap');
+const progressLabel = document.getElementById('progressLabel');
+const dotsEl = document.getElementById('dots');
+const PEEK = 16;       // px de deslocamento vertical por passo de profundidade
+const ROTATION = false; // true pra também inclinar os cards no arco
+
+CARDS.forEach((_, i) => {
+  const d = document.createElement('div');
+  d.className = 'dot' + (i === 0 ? ' active' : '');
+  dotsEl.appendChild(d);
+});
+
+CARDS.forEach((card, i) => {
+  const [a, b, d, e] = card.wave;
+  const filterId = `mq-quilt-${i}`;
+  const el = document.createElement('div');
+  el.className = 'card';
+  el.dataset.index = i;
+  el.style.zIndex = i + 1;
+  el.innerHTML = `
+    <div class="card-fx">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <filter id="${filterId}" x="-20%" y="-20%" width="140%" height="140%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.010 0.024" numOctaves="2" seed="7" result="n">
+            <animate attributeName="baseFrequency" dur="24s" values="0.010 0.024;0.019 0.014;0.010 0.024" repeatCount="indefinite" />
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="46" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </svg>
+      <div class="mq-quilt" style="filter:url(#${filterId})">
+        <div style="position:absolute;inset:0;background:linear-gradient(155deg,${a} 0%,${b} 34%,${d} 64%,${e} 100%)"></div>
+        <div style="position:absolute;inset:0;background:radial-gradient(70% 60% at 18% 8%,${a}F2 0%,transparent 100%),radial-gradient(80% 70% at 82% 96%,${d}E6 0%,transparent 100%),radial-gradient(60% 50% at 95% 30%,${e}CC 0%,transparent 100%)"></div>
+      </div>
+    </div>
+    <div class="card-scrim"></div>
+    <div class="card-body">
+      <p class="card-index" style="color:${card.accent}">${card.cat} — ${i + 1} / ${CARDS.length}</p>
+      <h3 class="card-title">${card.title}</h3>
+      <p class="card-desc">${card.desc}</p>
+    </div>
+  `;
+  deck.appendChild(el);
+});
+
+stageWrap.style.height = `${CARDS.length * 100}vh`;
+
+function render() {
+  const rect = stageWrap.getBoundingClientRect();
+  const vh = window.innerHeight;
+  const total = rect.height - vh;
+  const scrolled = Math.min(Math.max(-rect.top, 0), total);
+  const progress = total > 0 ? scrolled / total : 0;
+  const raw = progress * CARDS.length;
+  const current = Math.min(Math.floor(raw), CARDS.length - 1);
+
+  progressLabel.textContent = `${CARDS[current].cat[0] + CARDS[current].cat.slice(1).toLowerCase()} — ${current + 1}/${CARDS.length}`;
+  Array.from(dotsEl.children).forEach((dot, i) => dot.classList.toggle('active', i === current));
+
+  // Loop em arco: cada card tem uma "profundidade" contínua D = raw - i.
+  // D=0 é a frente (recém-assentado); conforme D cresce o card continua
+  // afundando pra trás ao longo de uma curva (não só reto pra cima) -- o
+  // card que já tinha ido pra trás continua descendo e ficando mais atrás
+  // ainda, suavemente, junto com a entrada do próximo card por baixo.
+  Array.from(deck.children).forEach((card, i) => {
+    const D = raw - i;
+    let x, y, unit, scale, rot;
+    if (D < -1) {
+      x = 0; y = 100; unit = '%'; scale = 0.94; rot = 0;
+    } else if (D < 0) {
+      const p = D + 1; // 0 -> 1 entrando por baixo
+      x = 0; y = (1 - p) * 100; unit = '%';
+      scale = 0.94 + p * 0.06;
+      rot = 0;
+    } else {
+      const d = Math.min(D, 4.5);
+      const angle = d * 0.42; // rad
+      x = Math.sin(angle) * (14 + d * 10);
+      y = -(d * PEEK) - (1 - Math.cos(angle)) * 14;
+      unit = 'px';
+      scale = Math.max(0.74, 1 - d * 0.055);
+      rot = ROTATION ? Math.sin(angle) * 6 : 0;
+    }
+    card.style.transform = unit === '%'
+      ? `translateY(${y}%) scale(${scale}) rotate(${rot}deg)`
+      : `translate(${x}px,${y}px) scale(${scale}) rotate(${rot}deg)`;
+    card.style.opacity = 1;
+  });
+}
+
+let ticking = false;
+function onScroll() {
+  if (!ticking) {
+    requestAnimationFrame(() => { render(); ticking = false; });
+    ticking = true;
+  }
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', onScroll);
+
+render();
+</script>
+<div class="spacer"></div>

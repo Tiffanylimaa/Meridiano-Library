@@ -34,6 +34,13 @@ Este é o índice central dos recursos publicados. As seções principais regist
 | Recurso | Categoria | Compatibilidade | Status |
 | --- | --- | --- | --- |
 | [Uso por agentes de IA](guides/uso-por-agentes-de-ia.md) | adoção | Codex, Claude Code, ChatGPT e agentes genéricos | ativo |
+| [Scroll stack de cards em loop](guides/scroll-stack-cards-loop.md) | boas práticas / UI | HTML/CSS/JS puro, portável para React | ativo |
+
+## Exemplos
+
+| Recurso | Guia relacionado | Compatibilidade | Status |
+| --- | --- | --- | --- |
+| [Scroll stack de cards em loop](examples/ui-patterns/scroll-stack-cards-loop.html) | [Scroll stack de cards em loop](guides/scroll-stack-cards-loop.md) | HTML/CSS/JS puro, sem dependências | ativo |
 
 ## Recursos de terceiros
 
