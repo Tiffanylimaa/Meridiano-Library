@@ -10,6 +10,7 @@ Este é o índice central dos recursos publicados. As seções principais regist
 | [Agente de Conteúdo Orgânico](agents/conteudo-organico.md) | conteúdo | Codex, Claude Code, ChatGPT | rascunho |
 | [Agente de Tráfego Pago](agents/trafego-pago.md) | marketing | Codex, Claude Code, ChatGPT | rascunho |
 | [Agente de Criação de Produto](agents/criacao-de-produto.md) | produto | Codex, Claude Code, ChatGPT | rascunho |
+| [Agente Usuário de Teste (QA de Lançamento)](agents/qa-usuario-teste.md) | qa | Codex, Claude Code, ChatGPT | rascunho |
 
 ## Prompts
 
