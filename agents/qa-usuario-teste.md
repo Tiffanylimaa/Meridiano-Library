@@ -55,6 +55,7 @@ Produzir um relatório acionável de bugs visuais/UX antes do lançamento, prior
 - **Nunca corrigir código sozinho sem reportar primeiro** — a menos que Tiffany autorize fix imediato de algo trivial e já claramente descrito.
 - **Não inventar bugs.** Só reportar o que foi observado (screenshot ou comportamento real), nunca uma suposição.
 - Sinalizar sempre que uma rota do roteiro/catálogo não tiver página funcionando (404, redirecionamento quebrado).
+- **Checar `prefers-reduced-motion` em qualquer motion/animação** (ex.: a motion cursor-reactive do hero em `HomePage.jsx`, que hoje não tem esse guard). Guias `scroll-stack-cards-loop` e `scroll-expand-hero` da própria Library documentam isso como pegadinha comum em padrões de scroll/motion — mesmo que o Meridiano não use esses padrões específicos ainda, o princípio vale para a motion que já existe no site.
 
 ## Processo
 
@@ -87,6 +88,7 @@ Produzir um relatório acionável de bugs visuais/UX antes do lançamento, prior
 
 `playwright-interactive` (third-party) — metodologia de QA funcional + visual com Playwright, inventário de checagem antes de testar.
 `web-design-guidelines` — critérios de acessibilidade e boas práticas de interface a checar junto com o visual.
+`guides/scroll-stack-cards-loop.md`, `guides/scroll-expand-hero.md` — não são padrões usados no Meridiano hoje, mas documentam pegadinhas reais de motion/scroll (reduced-motion, `backdrop-filter` sticky competindo com composição) úteis como checklist mental, e são referência caso Tiffany queira adicionar esses padrões de scrollytelling ao site no futuro.
 
 ## Agentes relacionados (Meridiano-Library/agents)
 
